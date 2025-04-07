@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 
 const authMiddleware = async(req,res,next) =>{
     try{
-        const token = req.cookies.token || req.headers('Authorization')?.split(' ')[1];
+        const token = req.cookies.token || req.headers['Authorization']?.split(' ')[1];
         // console.log("from authmiddleware : ", token)
         if(!token){
             return res.status(402).json({
