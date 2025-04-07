@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json())
 app.use(morgan('dev'))
 app.use(cors({
-    origin:'http://localhost:5173',
+    origin:'https://eztaskhub.netlify.app/',
     credentials:true,
     methods:['GET','POST','PUT','DELETE'],
     allowedHeaders: ['Content-Type','Authorization']
